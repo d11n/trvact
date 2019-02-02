@@ -1,0 +1,46 @@
+{
+    "name": "trvact",
+    "author": "Derek Dunagan (https://github.com/d11n)",
+    "license": "MIT",
+    "homepage": "https://github.com/d11n/trvact#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/d11n/trvact.git"
+    },
+    "bugs": {
+        "url": "https://github.com/d11n/trvact/issues"
+    },
+    "peerDependencies": {
+        "react": "^15.5.0 || ^16.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.3.0",
+        "@babel/plugin-proposal-decorators": "^7.3.0",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
+        "babel-eslint": "^10.0.1",
+        "chokidar-cli": "^1.2.1",
+        "cpx": "^1.5.0",
+        "eslint": "^5.13.0",
+        "eslint-plugin-react": "^7.12.4",
+        "lerna": "^3.10.7",
+        "lerna-wizard": "^1.0.9",
+        "rimraf": "^2.6.3"
+    },
+    "scripts": {
+        "lint": "eslint ./core && eslint ./packages",
+        "lerna": "lerna",
+        "test": "npm run lint --silent",
+        "prestart": "npm install --silent",
+        "start": "chokidar './core/**/*.js' './packages/**/*.js' --initial --silent --command 'npm run lint'",
+        "build": "npm run --silent build:npm",
+        "prebuild:npm": "npm install --silent && npm test --silent && rimraf ./builds/npm",
+        "build:npm": "lerna bootstrap && lerna run build:npm",
+        "prepublish:npm": "git push origin && npm run --silent build:npm",
+        "publish:npm": "lerna publish",
+        "rinse": "rimraf ./builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log*",
+        "scrub": "npm run --silent rinse; rimraf ./**/node_modules"
+    }
+}
