@@ -1,0 +1,29 @@
+{
+    "name": "trvact-mobx",
+    "version": "0.0.1",
+    "description": "TRVɅCT + MobX",
+    "author": "Derek Dunagan (https://github.com/d11n)",
+    "license": "MIT",
+    "main": "index.js",
+    "homepage": "https://github.com/d11n/trvact#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/d11n/trvact.git"
+    },
+    "bugs": {
+        "url": "https://github.com/d11n/trvact/issues"
+    },
+    "dependencies": {
+        "mobx-react": "^5.4.3"
+    },
+    "peerDependencies": {
+        "mobx": "^4.0.0 || ^5.0.0"
+    },
+    "scripts": {
+        "build:npm": "npm run build:npm:package.json && npm run build:npm:readme && npm run build:npm:core && npm run build:npm:trvact-mobx",
+        "build:npm:package.json": "cpx package.json ../../builds/npm/trvact-mobx",
+        "build:npm:readme": "cpx ../../README.md ../../builds/npm/trvact-mobx",
+        "build:npm:core": "babel ../../core --out-dir ../../builds/npm/trvact-mobx/trvact --config-file ../../.babelrc --no-comments",
+        "build:npm:trvact-mobx": "babel . --out-dir ../../builds/npm/trvact-mobx --config-file ../../.babelrc --no-comments"
+    }
+}

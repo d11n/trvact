@@ -1,0 +1,23 @@
+{
+    "name": "trvact",
+    "version": "0.0.1",
+    "description": "TRVɅCT",
+    "author": "Derek Dunagan (https://github.com/d11n)",
+    "license": "MIT",
+    "main": "index.js",
+    "homepage": "https://github.com/d11n/trvact#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/d11n/trvact.git"
+    },
+    "bugs": {
+        "url": "https://github.com/d11n/trvact/issues"
+    },
+    "scripts": {
+        "build:npm": "npm run build:npm:package.json && npm run build:npm:readme && npm run build:npm:core && npm run build:npm:trvact",
+        "build:npm:package.json": "cpx package.json ../../builds/npm/trvact",
+        "build:npm:readme": "cpx ../../README.md ../../builds/npm/trvact",
+        "build:npm:core": "babel ../../core --out-dir ../../builds/npm/trvact/trvact --config-file ../../.babelrc --no-comments",
+        "build:npm:trvact": "babel . --out-dir ../../builds/npm/trvact --config-file ../../.babelrc --no-comments"
+    }
+}
