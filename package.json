@@ -39,8 +39,8 @@
         "prebuild:npm": "npm install --silent && npm test --silent && rimraf ./builds/npm",
         "build:npm": "lerna bootstrap && lerna run build:npm",
         "prepublish:npm": "git push origin && npm run --silent build:npm",
-        "publish:npm": "lerna publish",
-        "rinse": "rimraf ./builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log*",
+        "publish:npm": "lerna publish --contents builds/npm",
+        "rinse": "rimraf ./builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log* ./**/lerna-debug.log* && lerna clean --yes --silent",
         "scrub": "npm run --silent rinse; rimraf ./**/node_modules"
     }
 }
