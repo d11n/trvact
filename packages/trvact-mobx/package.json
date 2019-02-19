@@ -4,7 +4,7 @@
     "description": "TRVɅCT + MobX: THE MOST METɅL WAY TO MAKE WEB ɅPPS WITH MOBX",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
-    "main": "index.js",
+    "main": "builds/npm/index.js",
     "homepage": "https://github.com/d11n/trvact#readme",
     "repository": {
         "type": "git",
@@ -20,10 +20,8 @@
         "mobx": "^4.0.0 || ^5.0.0"
     },
     "scripts": {
-        "build:npm": "npm run build:npm:package.json && npm run build:npm:readme && npm run build:npm:core && npm run build:npm:trvact-mobx",
-        "build:npm:package.json": "cpx package.json builds/npm",
+        "build:npm": "npm run build:npm:readme && npm run build:npm:core && npm run build:npm:trvact-mobx",
         "build:npm:readme": "cpx ../../README.md builds/npm",
-        "build:npm:core": "babel ../../core --out-dir builds/npm/trvact --config-file ../../.babelrc --no-comments",
         "build:npm:trvact-mobx": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
     },
     "gitHead": "14cafdc969b3de5753973c5f2fc01ddc81f28b27"
