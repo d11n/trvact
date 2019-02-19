@@ -22,7 +22,7 @@ function render_page(params) {
         role: 'main',
         className: `page ${ html_class }`,
     }
-    // if in browser, maybe change <title> (and og? may not matter)
+    // if in browser, change <title>? (and og? may not matter)
     return <main { ...attributes }>
         { page.render_page_content() }
     </main>
