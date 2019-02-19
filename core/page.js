@@ -15,9 +15,12 @@ export default class Page extends React.Component {
 
 function render_page(params) {
     const { page } = params
+    const html_class = page.html_class
+        || page.constructor.html_class
+        || page.constructor.name
     const attributes = {
         role: 'main',
-        className: `page ${ page.constructor.name }`,
+        className: `page ${ html_class }`,
     }
     // if in browser, maybe change <title> (and og? may not matter)
     return <main { ...attributes }>
