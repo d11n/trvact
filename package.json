@@ -1,15 +1,6 @@
 {
-    "name": "trvact",
-    "author": "Derek Dunagan (https://github.com/d11n)",
+    "private": true,
     "license": "MIT",
-    "homepage": "https://github.com/d11n/trvact#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/d11n/trvact.git"
-    },
-    "bugs": {
-        "url": "https://github.com/d11n/trvact/issues"
-    },
     "peerDependencies": {
         "react": "^15.5.0 || ^16.0.0"
     },

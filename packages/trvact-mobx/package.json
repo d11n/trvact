@@ -4,7 +4,6 @@
     "description": "TRVɅCT + MobX: THE MOST METɅL WAY TO MAKE WEB ɅPPS WITH MOBX",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
-    "main": "builds/npm/index.js",
     "homepage": "https://github.com/d11n/trvact#readme",
     "repository": {
         "type": "git",
@@ -14,7 +13,7 @@
         "url": "https://github.com/d11n/trvact/issues"
     },
     "dependencies": {
-        "mobx-react": "^5.4.3",
+        "mobx-react": "^5.0.0",
         "trvact": "^0.0.12"
     },
     "peerDependencies": {
