@@ -1,6 +1,6 @@
-export default @observer class Mobx_Page extends Page {}
+export default @observer class Page extends TRVɅCT.Page {}
 
 ///////////
 
 import { observer } from 'mobx-react'
-import Page from './page'
+import TRVɅCT from 'trvact'
