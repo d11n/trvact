@@ -1,8 +1,11 @@
-builds
 lerna-debug.log*
 node_modules
 npm-debug.log*
 .nyc_output
+packages/**/builds
+packages/**/LICENSE
+packages/**/README.md
+# ^ for now
 .tmp
 tmp
 .vscode

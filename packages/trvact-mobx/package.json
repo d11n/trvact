@@ -8,10 +8,15 @@
     "homepage": "https://github.com/d11n/trvact#readme",
     "bugs": "https://github.com/d11n/trvact/issues",
     "main": "builds/npm/index.js",
+    "files": [
+        "builds/npm/**/*",
+        "LICENSE",
+        "README.md"
+    ],
     "scripts": {
         "prebuild:npm": "npm install --silent",
-        "build:npm": "npm run build:npm:readme && npm run build:npm:package",
-        "build:npm:readme": "cpx ../../README.md builds/npm",
+        "build:npm": "npm run build:npm:text && npm run build:npm:package",
+        "build:npm:text": "cpx ../../README.md .; cpx ../../LICENSE .",
         "build:npm:package": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
     },
     "dependencies": {
