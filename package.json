@@ -29,7 +29,7 @@
         "prebuild:npm": "npm install --silent && npm test --silent && rimraf ./builds/npm",
         "build:npm": "lerna bootstrap && lerna run build:npm",
         "prepublish:npm": "git push origin && npm run --silent build:npm",
-        "publish:npm": "echo 'NPM_CONFIG_OTP= ./node_modules/.bin/lerna publish --contents builds/npm'",
+        "publish:npm": "echo 'NPM_CONFIG_OTP= ./node_modules/.bin/lerna publish",
         "rinse": "rimraf ./builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log* ./**/lerna-debug.log* && lerna clean --yes --silent",
         "scrub": "npm run --silent rinse; rimraf ./**/node_modules"
     }
