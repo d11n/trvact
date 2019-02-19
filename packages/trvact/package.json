@@ -4,7 +4,6 @@
     "description": "TRVɅCT: THE MOST METɅL WAY TO MAKE WEB ɅPPS",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
-    "main": "builds/npm/index.js",
     "homepage": "https://github.com/d11n/trvact#readme",
     "repository": {
         "type": "git",
@@ -12,6 +11,9 @@
     },
     "bugs": {
         "url": "https://github.com/d11n/trvact/issues"
+    },
+    "peerDependencies": {
+        "react": "^15.5.0 || ^16.0.0"
     },
     "scripts": {
         "build:npm": "npm run build:npm:readme && npm run build:npm:trvact",
