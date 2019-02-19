@@ -9,6 +9,7 @@
     "bugs": "https://github.com/d11n/trvact/issues",
     "main": "builds/npm/index.js",
     "scripts": {
+        "prebuild:npm": "npm install --silent",
         "build:npm": "npm run build:npm:readme && npm run build:npm:package",
         "build:npm:readme": "cpx ../../README.md builds/npm",
         "build:npm:package": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
