@@ -4,21 +4,17 @@
     "description": "TRVɅCT: THE MOST METɅL WAY TO MAKE WEB ɅPPS",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
+    "repository": "github:d11n/trvact",
     "homepage": "https://github.com/d11n/trvact#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/d11n/trvact.git"
-    },
-    "bugs": {
-        "url": "https://github.com/d11n/trvact/issues"
+    "bugs": "https://github.com/d11n/trvact/issues",
+    "main": "builds/npm/index.js",
+    "scripts": {
+        "build:npm": "npm run build:npm:readme && npm run build:npm:package",
+        "build:npm:readme": "cpx ../../README.md builds/npm",
+        "build:npm:package": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
     },
     "peerDependencies": {
         "react": "^15.5.0 || ^16.0.0"
-    },
-    "scripts": {
-        "build:npm": "npm run build:npm:readme && npm run build:npm:trvact",
-        "build:npm:readme": "cpx ../../README.md builds/npm",
-        "build:npm:trvact": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
     },
     "gitHead": "14cafdc969b3de5753973c5f2fc01ddc81f28b27"
 }
