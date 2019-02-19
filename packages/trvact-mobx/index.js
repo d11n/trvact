@@ -5,5 +5,5 @@ export default {
 
 ///////////
 
-import Page from './page'
 import TRVɅCT from './trvact'
+import Page from './page'
