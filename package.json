@@ -30,16 +30,16 @@
         "rimraf": "^2.6.3"
     },
     "scripts": {
-        "lint": "eslint ./core && eslint ./packages",
+        "lint": "eslint ./packages",
         "lerna": "lerna",
         "test": "npm run lint --silent",
         "prestart": "npm install --silent",
-        "start": "chokidar './core/**/*.js' './packages/**/*.js' --initial --silent --command 'npm run lint'",
+        "start": "chokidar './packages/**/*.js' --initial --silent --command 'npm run lint'",
         "build": "npm run --silent build:npm",
         "prebuild:npm": "npm install --silent && npm test --silent && rimraf ./builds/npm",
         "build:npm": "lerna bootstrap && lerna run build:npm",
         "prepublish:npm": "git push origin && npm run --silent build:npm",
-        "publish:npm": "lerna publish --contents builds/npm",
+        "publish:npm": "echo 'NPM_CONFIG_OTP= ./node_modules/.bin/lerna publish --contents builds/npm'",
         "rinse": "rimraf ./builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log* ./**/lerna-debug.log* && lerna clean --yes --silent",
         "scrub": "npm run --silent rinse; rimraf ./**/node_modules"
     }

@@ -20,7 +20,7 @@
         "mobx": "^4.0.0 || ^5.0.0"
     },
     "scripts": {
-        "build:npm": "npm run build:npm:readme && npm run build:npm:core && npm run build:npm:trvact-mobx",
+        "build:npm": "npm run build:npm:readme && npm run build:npm:trvact-mobx",
         "build:npm:readme": "cpx ../../README.md builds/npm",
         "build:npm:trvact-mobx": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
     },
