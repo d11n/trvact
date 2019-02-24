@@ -18,7 +18,7 @@
         "build:npm": "npm run build:npm:text && npm run build:npm:package",
         "build:npm:text": "cpx ../../README.md .; cpx ../../LICENSE .",
         "build:npm:package": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments",
-        "postbuild:npm": "rimraf README.md LICENSE builds/npm"
+        "postbuild:npm": "rimraf README.md LICENSE"
     },
     "dependencies": {
         "mobx-react": "^5.4.3",
