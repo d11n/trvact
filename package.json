@@ -1,5 +1,6 @@
 {
     "private": true,
+    "name": "trveact",
     "license": "MIT",
     "peerDependencies": {
         "react": "^15.5.0 || ^16.0.0"
@@ -30,7 +31,7 @@
         "build:npm": "lerna bootstrap && lerna run build:npm",
         "publish": "npm run --silent publish:npm",
         "prepublish:npm": "git push origin && npm run --silent build:npm",
-        "publish:npm": "echo 'NPM_CONFIG_OTP= ./node_modules/.bin/lerna publish'",
+        "publish:npm": "echo 'NPM_CONFIG_OTP= ./node_modules/.bin/lerna publish --yes'",
         "rinse": "rimraf ./packages/**/builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log* ./**/lerna-debug.log* && lerna clean --yes --silent",
         "scrub": "npm run --silent rinse; rimraf ./**/node_modules ./packages/**/node_modules"
     }

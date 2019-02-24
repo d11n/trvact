@@ -1,6 +1,6 @@
 {
     "name": "trveact",
-    "version": "0.0.18",
+    "version": "0.0.17",
     "description": "TRVEɅCT: THE MOST METɅL WAY TO MAKE WEB ɅPPS",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
@@ -22,6 +22,5 @@
     },
     "peerDependencies": {
         "react": "^15.5.0 || ^16.0.0"
-    },
-    "gitHead": "14cafdc969b3de5753973c5f2fc01ddc81f28b27"
+    }
 }
