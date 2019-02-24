@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "mobx-react": "^5.4.3",
-        "trvact": "^0.0.16"
+        "trveact": "^0.0.16"
     },
     "peerDependencies": {
         "mobx": "^4.0.0 || ^5.0.0"
