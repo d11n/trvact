@@ -1,12 +1,12 @@
 {
-    "name": "trvact-mobx",
+    "name": "trveact-mobx",
     "version": "0.0.16",
-    "description": "TRVɅCT + MobX: THE MOST METɅL WAY TO MAKE WEB ɅPPS WITH MOBX",
+    "description": "TRVEɅCT + MobX: THE MOST METɅL WAY TO MAKE WEB ɅPPS WITH MOBX",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
-    "repository": "github:d11n/trvact",
-    "homepage": "https://github.com/d11n/trvact#readme",
-    "bugs": "https://github.com/d11n/trvact/issues",
+    "repository": "github:d11n/trveact",
+    "homepage": "https://github.com/d11n/trveact#readme",
+    "bugs": "https://github.com/d11n/trveact/issues",
     "main": "builds/npm/index.js",
     "files": [
         "builds/npm/**/*",
@@ -17,7 +17,8 @@
         "prebuild:npm": "npm install --silent",
         "build:npm": "npm run build:npm:text && npm run build:npm:package",
         "build:npm:text": "cpx ../../README.md .; cpx ../../LICENSE .",
-        "build:npm:package": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments"
+        "build:npm:package": "babel . --out-dir builds/npm --config-file ../../.babelrc --no-comments",
+        "postbuild:npm": "rimraf README.md LICENSE builds/npm"
     },
     "dependencies": {
         "mobx-react": "^5.4.3",
