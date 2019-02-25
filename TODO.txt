@@ -1,1 +1,0 @@
-- figure out how to make lerna publish lean, non-crazy packages

@@ -32,7 +32,7 @@
         "publish": "npm run --silent publish:npm",
         "prepublish:npm": "git push origin && npm run --silent build:npm",
         "publish:npm": "echo 'NPM_CONFIG_OTP= ./node_modules/.bin/lerna publish --yes'",
-        "rinse": "rimraf ./packages/**/builds ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log* ./**/lerna-debug.log* && lerna clean --yes --silent",
+        "rinse": "rimraf ./packages/**/{builds,LICENSE,README.md} ./nyc_output ./**/.tmp ./**/tmp ./**/npm-debug.log* ./**/lerna-debug.log*",
         "scrub": "npm run --silent rinse; rimraf ./**/node_modules ./packages/**/node_modules"
     }
 }
