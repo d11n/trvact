@@ -1,6 +1,6 @@
 {
     "name": "trveact-mobx",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "TRVEɅCT + MobX: THE MOST METɅL WAY TO MAKE WEB ɅPPS WITH MOBX",
     "author": "Derek Dunagan (https://github.com/d11n)",
     "license": "MIT",
@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "mobx-react": "^5.4.3",
-        "trveact": "^0.2.0"
+        "trveact": "^0.3.0"
     },
     "peerDependencies": {
         "mobx": "^4.0.0 || ^5.0.0"
