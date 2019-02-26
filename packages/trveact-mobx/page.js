@@ -1,7 +1,8 @@
 export default class Page extends TRVEɅCT.Page {
     constructor(props) {
         super(props)
-        observer(this.constructor)
+        !this.constructor.isMobXReactObserver
+            && observer(this.constructor)
         return this
     }
 }

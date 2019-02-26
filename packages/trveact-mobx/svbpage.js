@@ -1,7 +1,8 @@
 export default class Svbpage extends TRVEɅCT.Svbpage {
     constructor(props) {
         super(props)
-        observer(this.constructor)
+        !this.constructor.isMobXReactObserver
+            && observer(this.constructor)
         return this
     }
 }
