@@ -1,4 +1,4 @@
-export default class Svbpage extends Page {
+export default class Svbpage extends React.Component {
     constructor(props) {
         super(props)
         const proto = constrvct_svbpage_proto(this)
@@ -8,7 +8,7 @@ export default class Svbpage extends Page {
     render() {
         const params = { me: this, vs: this.constructor }
         return render_svbpage({
-            html_class: this.constructor.get_html_class(params),
+            html_class: Page.get_html_class(params),
             content: this.render_content(),
         })
     }
@@ -18,6 +18,7 @@ export default class Svbpage extends Page {
 
 function constrvct_svbpage_proto(svbpage) {
     const proto = Object.getPrototypeOf(svbpage)
+    proto.render_content = svbpage.render
     proto.render = Svbpage.prototype.render
     return proto
 }

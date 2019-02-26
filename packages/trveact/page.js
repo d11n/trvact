@@ -1,5 +1,4 @@
 export default class Page extends React.Component {
-    static render_page = render_page
     static get_html_class = get_html_class
     constructor(props) {
         super(props)
@@ -21,9 +20,6 @@ export default class Page extends React.Component {
 
 function constrvct_page_proto(page) {
     const proto = Object.getPrototypeOf(page)
-    if (!proto) {
-        return {}
-    }
     proto.render_content = page.render
     proto.render = Page.prototype.render
     assign_react_method('componentDidMount', 'movnt')
